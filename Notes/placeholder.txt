@@ -1,0 +1,56 @@
+    def player_input(self):
+        key = pygame.key.get_pressed()
+        i = 2
+        if key[pygame.K_SPACE]:
+            self.shoot()
+
+        if key[pygame.K_w] or key[pygame.K_UP]:
+            if key[pygame.K_a] or key[pygame.K_LEFT]:
+                self.rect.y += i
+                self.rect.x += i
+            self.rect.y -= 5
+
+        elif key[pygame.K_s] or key[pygame.K_DOWN]:
+            if key[pygame.K_d] or key[pygame.K_RIGHT]:
+                self.rect.y -= i
+                self.rect.x -= i
+            self.rect.y += 5
+
+        elif key[pygame.K_a] or key[pygame.K_LEFT]:
+            if (key[pygame.K_w] or key[pygame.K_UP]):
+                self.rect.y += i
+                self.rect.x += i
+            self.rect.x -= 5
+
+
+
+        elif key[pygame.K_d] or key[pygame.K_RIGHT]:
+            if key[pygame.K_s] or key[pygame.K_DOWN]:
+                self.rect.y -= i
+                self.rect.y -= i
+            self.rect.x += 5
+
+        x_limit, y_limit = (0, 596), (330, 800)
+        limits = (x_limit, y_limit)
+        for x in range(2):
+            for limit in limits[x]:
+                if x != 1:
+                    if self.rect.x == limit:
+                        self.rect.x = limit
+                else:
+                    if self.rect.y == limit:
+                        self.rect.y = limit
+        for limit in x_limit:
+            if self.rect.x >= limit:
+                self.rect.x = limit
+        for limit in y_limit:
+            if self.rect.y >= limit:
+                self.rect.y = limit
+
+
+UI elements:
+    # if ability_text != 'None':
+    #     for x in range(2):
+    #         if ability_state == abilities[x] and power == abilities[x + 1 if x == 0 else x - 1]:
+    #             ability_text = 'Speed & Multi-shot'
+    

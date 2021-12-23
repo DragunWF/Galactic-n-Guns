@@ -1,0 +1,7 @@
+Controls:
+
+    Arrow Keys or WASD - To move
+    Space bar or Any Mouse button - To shoot
+    E - to mute/unmute the background song
+    Q - to mute/unmute all audio sources
+
