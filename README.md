@@ -1,5 +1,7 @@
 # Galactic-n-Guns
-A space shooter made from Python and PyGame.
+One of my first few projects in Python back when I was new to programming. 
+
+Made possible with the PyGame module.
 
 ### Links:
  - [Link to the game](https://dragonwf.itch.io/galactic-n-guns)
